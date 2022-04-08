@@ -55722,3 +55722,1781 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.4ms | Allocations: 5437)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-05 21:10:05 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 3.4ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 8830)
+Completed 200 OK in 126ms (Views: 108.3ms | ActiveRecord: 0.0ms | Allocations: 12842)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-05 21:10:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 842)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.4ms | Allocations: 5622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 96.8ms | Allocations: 9722)
+Completed 200 OK in 115ms (Views: 105.3ms | ActiveRecord: 0.8ms | Allocations: 17158)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-04-05 21:10:13 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"alanmellowess@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "alanmellowess@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 280ms (ActiveRecord: 0.3ms | Allocations: 6558)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-05 21:10:14 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:15
+  Rendered home/_header.html.erb (Duration: 4.2ms | Allocations: 1457)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 5326)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.3ms | Allocations: 5955)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2022-04-05 21:10:15 +0100
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  ↳ app/views/contacts/index.html.erb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/contacts/index.html.erb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/contacts/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/contacts/index.html.erb:23
+  Rendered contacts/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 14569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 97.0ms | Allocations: 18592)
+Completed 200 OK in 108ms (Views: 100.1ms | ActiveRecord: 1.9ms | Allocations: 21116)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-07 22:57:29 +0100
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 3.7ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 201.7ms | Allocations: 8823)
+Completed 200 OK in 292ms (Views: 236.2ms | ActiveRecord: 0.0ms | Allocations: 12835)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:19:38 +0100
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 4.0ms | Allocations: 932)
+  Rendered layout layouts/application.html.erb (Duration: 115.3ms | Allocations: 9232)
+Completed 200 OK in 162ms (Views: 132.0ms | ActiveRecord: 0.0ms | Allocations: 13350)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:19:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:19:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:14 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 4116)
+Completed 200 OK in 48ms (Views: 47.7ms | ActiveRecord: 0.0ms | Allocations: 4763)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:14 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:20:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 237)
+  Rendered layout layouts/application.html.erb (Duration: 96.8ms | Allocations: 29512)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.0ms | Allocations: 30065)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:17 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:20:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 125.8ms | Allocations: 38486)
+Completed 200 OK in 129ms (Views: 128.2ms | ActiveRecord: 0.0ms | Allocations: 39178)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 237)
+  Rendered layout layouts/application.html.erb (Duration: 138.2ms | Allocations: 50406)
+Completed 200 OK in 141ms (Views: 140.5ms | ActiveRecord: 0.0ms | Allocations: 50990)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:20:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 244)
+  Rendered layout layouts/application.html.erb (Duration: 140.2ms | Allocations: 40187)
+Completed 200 OK in 143ms (Views: 142.5ms | ActiveRecord: 0.0ms | Allocations: 40966)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 39446)
+Completed 200 OK in 93ms (Views: 92.9ms | ActiveRecord: 0.0ms | Allocations: 40067)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:21 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 3929)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 4448)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:21 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:20:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:23 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 49)
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 146.2ms | Allocations: 30480)
+Completed 200 OK in 150ms (Views: 149.1ms | ActiveRecord: 0.0ms | Allocations: 31037)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 171.5ms | Allocations: 58444)
+Completed 200 OK in 178ms (Views: 177.0ms | ActiveRecord: 0.0ms | Allocations: 61084)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:20:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:20:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/avataaars.svg"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 115.6ms | Allocations: 32553)
+Completed 200 OK in 118ms (Views: 117.1ms | ActiveRecord: 0.0ms | Allocations: 33144)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cake.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/circus.png"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:20:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/submarine.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/game.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/portfolio/cabin.png"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:20:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:25:33 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Compiling...
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:25:37 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Compiling...
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:38 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:38 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:25:42 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Compiling...
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:49 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:50 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:51 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:51 +0100
+[Webpacker] Compiled all packs in C:/Users/alan.mellowes/Desktop/contacts/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 5225ms
+Built at: 07/04/2022 23:25:51
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Compiled all packs in C:/Users/alan.mellowes/Desktop/contacts/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 4138ms
+Built at: 07/04/2022 23:25:51
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Compiled all packs in C:/Users/alan.mellowes/Desktop/contacts/public/packs
+[Webpacker] Hash: 2034dd941d5476d8645c
+Version: webpack 4.46.0
+Time: 5227ms
+Built at: 07/04/2022 23:25:51
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3dd0dc24d9c39bc09227.js    125 KiB  application  [emitted] [immutable]  application
+js/application-3dd0dc24d9c39bc09227.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3dd0dc24d9c39bc09227.js js/application-3dd0dc24d9c39bc09227.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 14693.5ms | Allocations: 434353)
+Completed 200 OK in 14695ms (Views: 14694.3ms | Allocations: 434917)
+
+
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 18263.0ms | Allocations: 582376)
+Completed 200 OK in 18267ms (Views: 18264.3ms | Allocations: 582940)
+
+
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 9217.9ms | Allocations: 229032)
+Completed 200 OK in 9220ms (Views: 9219.1ms | Allocations: 229601)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:25:52 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:25:52 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:25:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 237)
+  Rendered layout layouts/application.html.erb (Duration: 113.3ms | Allocations: 21927)
+Completed 200 OK in 116ms (Views: 114.6ms | Allocations: 22468)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:27:03 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 4030)
+Completed 200 OK in 45ms (Views: 44.0ms | Allocations: 4561)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:27:03 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:27:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:27:06 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 4033)
+Completed 200 OK in 50ms (Views: 48.6ms | Allocations: 4565)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:27:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:27:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:27:17 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 4032)
+Completed 200 OK in 48ms (Views: 47.8ms | Allocations: 4562)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:27:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:27:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:28:01 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 620)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 722)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 5733)
+Completed 200 OK in 69ms (Views: 67.3ms | Allocations: 7249)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:28:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:28:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:29:30 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 4032)
+Completed 200 OK in 48ms (Views: 48.0ms | Allocations: 4582)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:29:30 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:29:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:34:10 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 746)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 5751)
+Completed 200 OK in 70ms (Views: 67.5ms | Allocations: 7259)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:34:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:34:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:34:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:34:15 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 4032)
+Completed 200 OK in 44ms (Views: 43.5ms | Allocations: 4578)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:34:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:34:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:34:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:34:17 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 58.5ms | Allocations: 4032)
+Completed 200 OK in 61ms (Views: 60.1ms | Allocations: 4562)
+
+
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:34:18 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:34:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:34:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:36:07 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1212)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 5753)
+Completed 200 OK in 59ms (Views: 56.8ms | Allocations: 7261)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:36:10 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 349)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 4134)
+Completed 200 OK in 52ms (Views: 51.4ms | Allocations: 4662)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:36:11 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 349)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 4225)
+Completed 200 OK in 56ms (Views: 53.2ms | Allocations: 4864)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:36:13 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.5ms | Allocations: 303)
+  Rendered devise/shared/_links.html.erb (Duration: 4.4ms | Allocations: 734)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 163.1ms | Allocations: 5697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 359)
+  Rendered layout layouts/application.html.erb (Duration: 213.0ms | Allocations: 10030)
+Completed 200 OK in 232ms (Views: 221.9ms | ActiveRecord: 1.3ms | Allocations: 18296)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-07 23:36:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 335)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 2334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 357)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 6658)
+Completed 200 OK in 90ms (Views: 79.4ms | ActiveRecord: 0.0ms | Allocations: 8698)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:36:16 +0100
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:16 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1218)
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 100.9ms | Allocations: 50252)
+Completed 200 OK in 103ms (Views: 102.1ms | ActiveRecord: 0.0ms | Allocations: 51097)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:36:16 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:16 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 113.3ms | Allocations: 44625)
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.0ms | Allocations: 45807)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:36:17 +0100
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1206)
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 117.0ms | Allocations: 49471)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.0ms | Allocations: 50274)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-07 23:36:18 +0100
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:18 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 177)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1169)
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 112.8ms | Allocations: 49595)
+Completed 200 OK in 116ms (Views: 114.9ms | ActiveRecord: 0.0ms | Allocations: 50420)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:19 +0100
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:36:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1271)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 68.1ms | Allocations: 10971)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.0ms | Allocations: 11675)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:36:20 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:20 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 48554)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.0ms | Allocations: 49140)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:36:21 +0100
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:21 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1207)
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 102.9ms | Allocations: 50597)
+Completed 200 OK in 105ms (Views: 104.3ms | ActiveRecord: 0.0ms | Allocations: 51303)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-07 23:36:21 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 177)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 5286)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms | Allocations: 6080)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:36:22 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:36:22 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 349)
+  Rendered layout layouts/application.html.erb (Duration: 97.7ms | Allocations: 45480)
+Completed 200 OK in 102ms (Views: 101.5ms | ActiveRecord: 0.0ms | Allocations: 46289)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:40:27 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.0ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 5299)
+Completed 200 OK in 73ms (Views: 70.7ms | ActiveRecord: 0.0ms | Allocations: 6797)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:40:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:41:14 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 5294)
+Completed 200 OK in 71ms (Views: 67.1ms | ActiveRecord: 0.0ms | Allocations: 6801)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-07 23:41:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 690)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 662)
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 7436)
+Completed 200 OK in 76ms (Views: 75.5ms | ActiveRecord: 0.0ms | Allocations: 9610)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:41:26 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 263)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 6404)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms | Allocations: 7885)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:41:27 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:27 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 173)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered layout layouts/application.html.erb (Duration: 110.7ms | Allocations: 49172)
+Completed 200 OK in 121ms (Views: 117.9ms | ActiveRecord: 0.0ms | Allocations: 50495)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:42 +0100
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:41:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 12113)
+Completed 200 OK in 66ms (Views: 64.9ms | Allocations: 12662)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:43 +0100
+Started GET "/home/about" for 127.0.0.1 at 2022-04-07 23:41:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 62.7ms | Allocations: 7701)
+Completed 200 OK in 65ms (Views: 64.2ms | Allocations: 8296)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:41:53 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 4103)
+Completed 200 OK in 58ms (Views: 55.8ms | Allocations: 4764)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:41:58 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 616)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 740)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 5740)
+Completed 200 OK in 67ms (Views: 65.1ms | Allocations: 7231)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:41:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:41:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:42:18 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 583)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 5710)
+Completed 200 OK in 68ms (Views: 64.7ms | Allocations: 7234)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:42:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:42:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-07 23:42:29 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 263)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 609)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 64.0ms | Allocations: 6998)
+Completed 200 OK in 75ms (Views: 73.6ms | Allocations: 8812)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-07 23:42:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/assets/img/portfolio/game.png" for 127.0.0.1 at 2022-04-07 23:42:29 +0100
+Started GET "/users/assets/img/portfolio/circus.png" for 127.0.0.1 at 2022-04-07 23:42:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/game.png"):
+  
+Started GET "/users/assets/img/portfolio/cake.png" for 127.0.0.1 at 2022-04-07 23:42:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/circus.png"):
+  
+Started GET "/users/assets/img/portfolio/cabin.png" for 127.0.0.1 at 2022-04-07 23:42:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/cake.png"):
+  
+Started GET "/users/assets/img/portfolio/safe.png" for 127.0.0.1 at 2022-04-07 23:42:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/cabin.png"):
+  
+Started GET "/users/assets/img/portfolio/submarine.png" for 127.0.0.1 at 2022-04-07 23:42:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/safe.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/submarine.png"):
+  
+Started GET "/users/assets/img/avataaars.svg" for 127.0.0.1 at 2022-04-07 23:42:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/avataaars.svg"):
+  
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:42:30 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:42:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:43:12 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 5688)
+Completed 200 OK in 69ms (Views: 66.7ms | Allocations: 7213)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:43:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:43:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:43:34 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 4032)
+Completed 200 OK in 53ms (Views: 52.2ms | Allocations: 4582)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:43:34 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:43:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:44:34 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 558)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 5690)
+Completed 200 OK in 80ms (Views: 78.2ms | Allocations: 7199)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:44:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:44:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-07 23:44:51 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 552)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.6ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | Allocations: 5677)
+Completed 200 OK in 86ms (Views: 84.3ms | Allocations: 7174)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-07 23:44:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-07 23:44:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for ::1 at 2022-04-08 00:04:56 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 4065)
+Completed 200 OK in 45ms (Views: 44.1ms | Allocations: 4557)
+
+
+Started GET "/css/styles.css" for ::1 at 2022-04-08 00:04:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-04-08 00:04:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:06:49 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 5680)
+Completed 200 OK in 70ms (Views: 68.3ms | Allocations: 7188)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:06:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:06:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:06:51 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 4033)
+Completed 200 OK in 54ms (Views: 53.0ms | Allocations: 4584)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:06:51 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:06:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:07:51 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 4028)
+Completed 200 OK in 51ms (Views: 50.2ms | Allocations: 4537)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:07:51 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:07:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:34:10 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 550)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 5677)
+Completed 200 OK in 73ms (Views: 70.3ms | Allocations: 7185)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:34:11 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:34:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:34:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 4032)
+Completed 200 OK in 60ms (Views: 59.6ms | Allocations: 4578)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:34:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 4020)
+Completed 200 OK in 52ms (Views: 51.7ms | Allocations: 4528)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:34:21 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 4020)
+Completed 200 OK in 60ms (Views: 59.6ms | Allocations: 4528)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:35:08 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | Allocations: 5671)
+Completed 200 OK in 71ms (Views: 68.5ms | Allocations: 7158)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:35:08 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:35:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-08 00:35:57 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 263)
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 609)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2760)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 663)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 7796)
+Completed 200 OK in 66ms (Views: 64.8ms | Allocations: 9868)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:35:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/assets/img/avataaars.svg" for 127.0.0.1 at 2022-04-08 00:35:57 +0100
+Started GET "/users/assets/img/portfolio/cabin.png" for 127.0.0.1 at 2022-04-08 00:35:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/avataaars.svg"):
+  
+Started GET "/users/assets/img/portfolio/cake.png" for 127.0.0.1 at 2022-04-08 00:35:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/cabin.png"):
+  
+Started GET "/users/assets/img/portfolio/circus.png" for 127.0.0.1 at 2022-04-08 00:35:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/cake.png"):
+  
+Started GET "/users/assets/img/portfolio/game.png" for 127.0.0.1 at 2022-04-08 00:35:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/circus.png"):
+  
+Started GET "/users/assets/img/portfolio/submarine.png" for 127.0.0.1 at 2022-04-08 00:35:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/game.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/submarine.png"):
+  
+Started GET "/users/assets/img/portfolio/safe.png" for 127.0.0.1 at 2022-04-08 00:35:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/safe.png"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-08 00:36:00 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 224)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1802)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 6048)
+Completed 200 OK in 55ms (Views: 53.9ms | Allocations: 7620)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:36:01 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 4513)
+Completed 200 OK in 61ms (Views: 59.2ms | Allocations: 5795)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:36:03 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:36:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 74.0ms | Allocations: 31011)
+Completed 200 OK in 77ms (Views: 74.9ms | Allocations: 32202)
+
+
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:36:03 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/home/assets/img/avataaars.svg" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+Started GET "/home/assets/img/portfolio/cabin.png" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/avataaars.svg"):
+  
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 113.2ms | Allocations: 25583)
+Completed 200 OK in 115ms (Views: 114.6ms | Allocations: 26196)
+
+
+Started GET "/home/assets/img/portfolio/cake.png" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/cabin.png"):
+  
+Started GET "/home/assets/img/portfolio/game.png" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/cake.png"):
+  
+Started GET "/home/assets/img/portfolio/safe.png" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/game.png"):
+  
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/safe.png"):
+  
+Started GET "/home/assets/img/portfolio/submarine.png" for 127.0.0.1 at 2022-04-08 00:36:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/submarine.png"):
+  
+Started GET "/home/assets/img/portfolio/circus.png" for 127.0.0.1 at 2022-04-08 00:36:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/circus.png"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:36:47 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:47 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 148.5ms | Allocations: 34313)
+Completed 200 OK in 150ms (Views: 149.7ms | Allocations: 34915)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-08 00:36:49 +0100
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 177)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1244)
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 22046)
+Completed 200 OK in 57ms (Views: 55.5ms | Allocations: 22907)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:36:50 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:50 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 104.2ms | Allocations: 48939)
+Completed 200 OK in 107ms (Views: 106.5ms | Allocations: 49538)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-08 00:36:51 +0100
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-08 00:36:51 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 50)
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-08 00:36:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 99.6ms | Allocations: 21426)
+Completed 200 OK in 103ms (Views: 101.7ms | Allocations: 22182)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-08 00:37:37 +0100
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:37:37 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2310)
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/users/assets/img/avataaars.svg" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 108.6ms | Allocations: 30581)
+Completed 200 OK in 115ms (Views: 111.8ms | Allocations: 31770)
+
+
+Started GET "/users/assets/img/portfolio/cabin.png" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/avataaars.svg"):
+  
+Started GET "/users/assets/img/portfolio/cake.png" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/cabin.png"):
+  
+Started GET "/users/assets/img/portfolio/game.png" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/cake.png"):
+  
+Started GET "/users/assets/img/portfolio/safe.png" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/game.png"):
+  
+Started GET "/users/assets/img/portfolio/submarine.png" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/safe.png"):
+  
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/submarine.png"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-08 00:37:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 177)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1285)
+Started GET "/users/assets/img/portfolio/circus.png" for 127.0.0.1 at 2022-04-08 00:37:39 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 103.3ms | Allocations: 9227)
+Completed 200 OK in 108ms (Views: 106.6ms | Allocations: 10131)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/users/assets/img/portfolio/circus.png"):
+  
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:37:39 +0100
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:37:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:37:39 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 107.8ms | Allocations: 52970)
+Completed 200 OK in 111ms (Views: 110.4ms | Allocations: 53628)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:38:00 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 3.4ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 740)
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 5307)
+Completed 200 OK in 86ms (Views: 83.5ms | Allocations: 6815)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:38:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-08 00:38:07 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.9ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 5293)
+Completed 200 OK in 62ms (Views: 60.6ms | Allocations: 6789)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-08 00:38:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-04-08 00:38:17 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 263)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 609)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 7007)
+Completed 200 OK in 67ms (Views: 66.3ms | Allocations: 8841)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-08 00:38:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
