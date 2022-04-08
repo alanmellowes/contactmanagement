@@ -1,4 +1,5 @@
 class Contact < ApplicationRecord
+	has_one_attached :image
 	belongs_to :user
 
 	def self.search(search)
