@@ -1,3 +1,8 @@
+PATH
+  remote: customgemCM
+  specs:
+    customgemCM (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -217,6 +222,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  customgemCM!
   devise (~> 4.8, >= 4.8.1)
   jbuilder (~> 2.7)
   pg
