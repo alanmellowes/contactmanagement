@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :review_comments
+  get 'reviews/index'
   devise_for :users
   resources :contacts
   #get 'home/index'

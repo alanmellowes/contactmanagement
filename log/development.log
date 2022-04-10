@@ -64337,3 +64337,2519 @@ Completed 200 OK in 133ms (Views: 132.3ms | ActiveRecord: 0.2ms | Allocations: 2
   
 ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
   
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUser (20220409205333)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.1ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220409205333"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ? LIMIT ?[0m  [["admin", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (3.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-09 21:13:46.983505"], ["admin", 1], ["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ? LIMIT ?[0m  [["admin", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:18:56 +0100
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 647.1ms | Allocations: 21998)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:35
+  Rendered home/_header.html.erb (Duration: 26.8ms | Allocations: 8956)
+  Rendered layout layouts/application.html.erb (Duration: 834.8ms | Allocations: 41234)
+Completed 200 OK in 945ms (Views: 874.1ms | ActiveRecord: 2.9ms | Allocations: 45370)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:18:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 01:18:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-10 01:19:28 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 2.3ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:35
+  Rendered home/_header.html.erb (Duration: 10.2ms | Allocations: 1363)
+  Rendered layout layouts/application.html.erb (Duration: 74.5ms | Allocations: 5483)
+Completed 200 OK in 88ms (Views: 83.9ms | ActiveRecord: 0.3ms | Allocations: 6290)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-10 01:19:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/home/assets/img/avataaars.svg" for 127.0.0.1 at 2022-04-10 01:19:28 +0100
+Started GET "/home/assets/img/portfolio/addfriend.PNG" for 127.0.0.1 at 2022-04-10 01:19:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/avataaars.svg"):
+  
+Started GET "/home/assets/img/portfolio/signup.jpg" for 127.0.0.1 at 2022-04-10 01:19:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/addfriend.PNG"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/home/assets/img/portfolio/signup.jpg"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-10 01:20:36 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.3ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 20.0ms | Allocations: 18040)
+  Rendered layout layouts/application.html.erb (Duration: 100.8ms | Allocations: 22673)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms | Allocations: 24161)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `reviews_path' for #<ActionView::Base:0x00000000006420>
+Did you mean?  reviews_index_path):
+    32:       </li>
+    33: 
+    34:       <li class="nav-item">
+    35:         <%= link_to "Reviews", reviews_path, class:"nav-link" %>
+    36:       </li>
+    37: 
+    38:    
+  
+app/views/home/_header.html.erb:35
+app/views/layouts/application.html.erb:22
+Started GET "/home/about" for 127.0.0.1 at 2022-04-10 01:20:50 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.2ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:39
+  Rendered home/_header.html.erb (Duration: 13.6ms | Allocations: 1941)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 6578)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.3ms | Allocations: 8161)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-10 01:20:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:20:52 +0100
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:39
+  Rendered home/_header.html.erb (Duration: 10.4ms | Allocations: 1452)
+  Rendered layout layouts/application.html.erb (Duration: 59.1ms | Allocations: 5650)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.3ms | Allocations: 7040)
+
+
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:20:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:20:58 +0100
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:39
+  Rendered home/_header.html.erb (Duration: 10.3ms | Allocations: 1226)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 5093)
+Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.3ms | Allocations: 5654)
+
+
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:20:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+Started GET "/home/about" for 127.0.0.1 at 2022-04-10 01:20:58 +0100
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-10 01:20:58 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:39
+  Rendered home/_header.html.erb (Duration: 13.8ms | Allocations: 1276)
+  Rendered layout layouts/application.html.erb (Duration: 120.2ms | Allocations: 21681)
+Completed 200 OK in 141ms (Views: 134.1ms | ActiveRecord: 1.4ms | Allocations: 22257)
+
+
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:00 +0100
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:21:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:39
+  Rendered home/_header.html.erb (Duration: 12.3ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 141.6ms | Allocations: 33330)
+Completed 200 OK in 147ms (Views: 144.4ms | ActiveRecord: 0.6ms | Allocations: 33883)
+
+
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:21:25 +0100
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 10.1ms | Allocations: 1927)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 6536)
+Completed 200 OK in 92ms (Views: 86.4ms | ActiveRecord: 0.6ms | Allocations: 8039)
+
+
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:21:30 +0100
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.3ms | Allocations: 1225)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 5087)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.2ms | Allocations: 5632)
+
+
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2022-04-10 01:21:31 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.4ms | Allocations: 300)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 212.8ms | Allocations: 5491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 269.3ms | Allocations: 9775)
+Completed 200 OK in 294ms (Views: 288.0ms | ActiveRecord: 0.6ms | Allocations: 13108)
+
+
+Started GET "/users/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/css/styles.css"):
+  
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:21:33 +0100
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:33 +0100
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 13.7ms | Allocations: 1418)
+  Rendered layout layouts/application.html.erb (Duration: 121.8ms | Allocations: 25115)
+Completed 200 OK in 132ms (Views: 130.7ms | ActiveRecord: 0.3ms | Allocations: 25786)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2022-04-10 01:21:34 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.8ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 10.4ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 92.5ms | Allocations: 5717)
+Completed 200 OK in 112ms (Views: 102.2ms | ActiveRecord: 0.5ms | Allocations: 6989)
+
+
+Started GET "/home/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/home/css/styles.css"):
+  
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:21:35 +0100
+Started GET "/reviews/css/styles.css" for 127.0.0.1 at 2022-04-10 01:21:35 +0100
+Processing by ReviewsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  
+ActionController::RoutingError (No route matches [GET] "/reviews/css/styles.css"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 15.5ms | Allocations: 2098)
+  Rendered layout layouts/application.html.erb (Duration: 119.4ms | Allocations: 44982)
+Completed 200 OK in 124ms (Views: 122.8ms | ActiveRecord: 0.3ms | Allocations: 45532)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReviewComments (20220410002400)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "review_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220410002400"]]
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/reviews/index" for 127.0.0.1 at 2022-04-10 01:32:20 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ReviewsController
+Did you mean?  DeviseController):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:32:36 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 31.6ms | Allocations: 31994)
+  Rendered layout layouts/application.html.erb (Duration: 226.4ms | Allocations: 52237)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 1.1ms | Allocations: 53850)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `reviews_comments_index_path' for #<ActionView::Base:0x00000000009348>
+Did you mean?  review_comments_path):
+    49:       </li>
+    50: 
+    51:       <li class="nav-item">
+    52:         <%= link_to "Reviews", reviews_comments_index_path, class:"nav-link" %>
+    53:       </li>
+    54: 
+    55:      <% else %>
+  
+app/views/home/_header.html.erb:52
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:32:58 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 36.3ms | Allocations: 26168)
+  Rendered layout layouts/application.html.erb (Duration: 103.8ms | Allocations: 31607)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.2ms | Allocations: 33127)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review_comments_index_path' for #<ActionView::Base:0x00000000009558>
+Did you mean?  review_comments_path
+               review_comment_path):
+    49:       </li>
+    50: 
+    51:       <li class="nav-item">
+    52:         <%= link_to "Reviews", review_comments_index_path, class:"nav-link" %>
+    53:       </li>
+    54: 
+    55:      <% else %>
+  
+app/views/home/_header.html.erb:52
+app/views/layouts/application.html.erb:22
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:33:18 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 19.3ms | Allocations: 1924)
+  Rendered layout layouts/application.html.erb (Duration: 104.0ms | Allocations: 7330)
+Completed 200 OK in 118ms (Views: 112.4ms | ActiveRecord: 0.7ms | Allocations: 8903)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:33:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 01:33:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:33:34 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:19
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2203)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 10.0ms | Allocations: 1301)
+  Rendered layout layouts/application.html.erb (Duration: 89.7ms | Allocations: 7654)
+Completed 200 OK in 105ms (Views: 94.3ms | ActiveRecord: 0.6ms | Allocations: 9513)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:33:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:33:51 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (1.4ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 15)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 2049)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 20.0ms | Allocations: 1762)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 8269)
+Completed 200 OK in 152ms (Views: 145.3ms | ActiveRecord: 2.2ms | Allocations: 9826)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:33:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments/new" for 127.0.0.1 at 2022-04-10 01:33:53 +0100
+Processing by ReviewCommentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/new.html.erb within layouts/application
+  Rendered review_comments/_form.html.erb (Duration: 2.8ms | Allocations: 1478)
+  Rendered review_comments/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 3.4ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | Allocations: 7001)
+Completed 200 OK in 93ms (Views: 79.5ms | ActiveRecord: 1.9ms | Allocations: 10704)
+
+
+Started GET "/review_comments/css/styles.css" for 127.0.0.1 at 2022-04-10 01:33:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/review_comments/css/styles.css"):
+  
+Started GET "/review_comments/new" for 127.0.0.1 at 2022-04-10 01:34:07 +0100
+Processing by ReviewCommentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/new.html.erb within layouts/application
+  Rendered review_comments/_form.html.erb (Duration: 2.9ms | Allocations: 1295)
+  Rendered review_comments/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1734)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 7.8ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 90.2ms | Allocations: 8114)
+Completed 200 OK in 104ms (Views: 99.3ms | ActiveRecord: 0.5ms | Allocations: 9631)
+
+
+Started GET "/review_comments/css/styles.css" for 127.0.0.1 at 2022-04-10 01:34:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/review_comments/css/styles.css"):
+  
+Started POST "/review_comments" for 127.0.0.1 at 2022-04-10 01:34:25 +0100
+Processing by ReviewCommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review_comment"=>{"title"=>"Good", "body"=>"This app is good for managing my contacts"}, "commit"=>"Create Review comment"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/review_comments_controller.rb:27:in `block in create'
+  [1m[36mReviewComment Create (2.1ms)[0m  [1m[32mINSERT INTO "review_comments" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Good"], ["body", "This app is good for managing my contacts"], ["created_at", "2022-04-10 00:34:25.873390"], ["updated_at", "2022-04-10 00:34:25.873390"]]
+  ↳ app/controllers/review_comments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/review_comments_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/review_comments/1
+Completed 302 Found in 29ms (ActiveRecord: 8.7ms | Allocations: 3788)
+
+
+Started GET "/review_comments/1" for 127.0.0.1 at 2022-04-10 01:34:25 +0100
+Processing by ReviewCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReviewComment Load (0.6ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments" WHERE "review_comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/review_comments_controller.rb:63:in `set_review_comment'
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/show.html.erb within layouts/application
+  Rendered review_comments/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.0ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | Allocations: 5482)
+Completed 200 OK in 93ms (Views: 76.6ms | ActiveRecord: 0.9ms | Allocations: 7024)
+
+
+Started GET "/review_comments/css/styles.css" for 127.0.0.1 at 2022-04-10 01:34:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/review_comments/css/styles.css"):
+  
+Started GET "/review_comments/1" for 127.0.0.1 at 2022-04-10 01:34:36 +0100
+Processing by ReviewCommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments" WHERE "review_comments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/review_comments_controller.rb:63:in `set_review_comment'
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/show.html.erb within layouts/application
+  Rendered review_comments/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 17.9ms | Allocations: 1870)
+  Rendered layout layouts/application.html.erb (Duration: 121.0ms | Allocations: 6863)
+Completed 200 OK in 151ms (Views: 137.4ms | ActiveRecord: 0.5ms | Allocations: 8983)
+
+
+Started GET "/review_comments/css/styles.css" for 127.0.0.1 at 2022-04-10 01:34:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/review_comments/css/styles.css"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:34:43 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3145)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3228)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms | Allocations: 3892)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    19:   </thead>
+    20: 
+    21:   <tbody>
+    22:     <% render @review_comments %>
+    23:       
+    24:     <% end %>
+    25:   </tbody>
+  
+app/views/review_comments/index.html.erb:22
+app/views/review_comments/index.html.erb:8
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:35:37 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 118.2ms | Allocations: 8369)
+  Rendered layout layouts/application.html.erb (Duration: 119.8ms | Allocations: 8467)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms | Allocations: 9955)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    19:   </thead>
+    20: 
+    21:   <tbody>
+    22:     <% render @review_post %>
+    23:       
+    24:     <% end %>
+    25:   </tbody>
+  
+app/views/review_comments/index.html.erb:22
+app/views/review_comments/index.html.erb:8
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:36:09 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1938)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2027)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 3577)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    19:   </thead>
+    20: 
+    21:   <tbody>
+    22:     <% render @review_posts %>
+    23:       
+    24:     <% end %>
+    25:   </tbody>
+  
+app/views/review_comments/index.html.erb:22
+app/views/review_comments/index.html.erb:8
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:36:51 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1937)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2026)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 3576)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comment %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:37:31 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1937)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2026)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 3576)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @_review_post %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:38:25 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:21
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3268)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3357)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms | Allocations: 4901)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comments %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:43:32 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 310.5ms | Allocations: 20257)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 27.5ms | Allocations: 8984)
+  Rendered layout layouts/application.html.erb (Duration: 423.7ms | Allocations: 34195)
+Completed 200 OK in 458ms (Views: 433.9ms | ActiveRecord: 1.3ms | Allocations: 38355)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:43:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 01:43:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:43:34 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:21
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 6457)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 6546)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.9ms | Allocations: 8352)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comments %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:44:21 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.6ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:21
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 3279)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 3369)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms | Allocations: 4932)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comments %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:45:46 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 123.1ms | Allocations: 8637)
+  Rendered layout layouts/application.html.erb (Duration: 125.0ms | Allocations: 8736)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms | Allocations: 10304)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comment %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:46:00 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.4ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:21
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3279)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 3369)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.4ms | Allocations: 4929)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comments %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:48:35 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 13.5ms | Allocations: 1928)
+  Rendered layout layouts/application.html.erb (Duration: 82.4ms | Allocations: 7339)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.7ms | Allocations: 8919)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:48:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 01:48:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:48:37 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (1.0ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:21
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 29.0ms | Allocations: 3283)
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 3372)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 1.0ms | Allocations: 4617)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render @review_comments %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:50:09 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2368)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2457)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 4008)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/__review_comments with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render 'review_comments/_review_comments' %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:50:29 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: review_comments/__review_comments.html.erb (called from block in _app_views_review_comments_index_html_erb__742218402_14604 at C:/Users/alan.mellowes/Desktop/contacts/app/views/review_comments/index.html.erb:21)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: review_comments/__review_comments.html.erb (called from block in _app_views_review_comments_index_html_erb__742218402_14604 at C:/Users/alan.mellowes/Desktop/contacts/app/views/review_comments/index.html.erb:21)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: review_comments/__review_comments.html.erb (called from block in _app_views_review_comments_index_html_erb__742218402_14604 at C:/Users/alan.mellowes/Desktop/contacts/app/views/review_comments/index.html.erb:21)
+DEPRECATION WARNING: Rendering actions with '.' in the name is deprecated: review_comments/__review_comments.html.erb (called from block in _app_views_review_comments_index_html_erb__742218402_14604 at C:/Users/alan.mellowes/Desktop/contacts/app/views/review_comments/index.html.erb:21)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 39.9ms | Allocations: 3244)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 3333)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms | Allocations: 4883)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/__review_comments.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render 'review_comments/_review_comments.html.erb' %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:50:35 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 6.3ms | Allocations: 1924)
+  Rendered layout layouts/application.html.erb (Duration: 96.1ms | Allocations: 7351)
+Completed 200 OK in 106ms (Views: 103.2ms | ActiveRecord: 0.3ms | Allocations: 8673)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:50:35 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 01:50:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:50:37 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1661)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1744)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2274)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/__review_comments.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    18:   </thead>
+    19: 
+    20:   <tbody>
+    21:     <% render 'review_comments/_review_comments.html.erb' %>
+    22:       
+    23:     <% end %>
+    24:   </tbody>
+  
+app/views/review_comments/index.html.erb:21
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:51:09 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 27.9ms | Allocations: 19187)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 19276)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms | Allocations: 20765)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review_comment' for #<ActionView::Base:0x00000000007b30>
+Did you mean?  @review_comments
+               review_comment_url):
+    19: 
+    20:   <tbody>
+    21:     <tr>
+    22:         <td><%= review_comment.title %></td>
+    23:         <td><%= review_comment.body %></td>
+    24:         <td><%= link_to 'Show', review_comment %></td>
+    25:         <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+  
+app/views/review_comments/index.html.erb:22
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:52:10 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 19748)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 19837)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms | Allocations: 21387)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review_comments' for #<ActionView::Base:0x00000000007dd0>
+Did you mean?  @review_comments
+               review_comments_url
+               review_comment_url):
+    19: 
+    20:   <tbody>
+    21:     <tr>
+    22:         <td><%= review_comments.title %></td>
+    23:         <td><%= review_comments.body %></td>
+    24:         <td><%= link_to 'Show', review_comment %></td>
+    25:         <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+  
+app/views/review_comments/index.html.erb:22
+app/views/review_comments/index.html.erb:7
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:52:44 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 1475)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 3030)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_comments.each do |review_comment| %>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Review Comments</h1>
+4:    
+5:    <%= form_with url: review_comments_path, method: :get do |form| %>
+6:      <%= form.text_field :query %>
+7:        <%= form.submit "Search" %>
+8:    
+9:    <table>
+10:      <thead>
+11:        <tr>
+12:          <th>Title</th>
+13:          <th>Body</th>
+14:          <th colspan="3"></th>
+15:        </tr>
+16:      </thead>
+17:    
+18:      <tbody>
+19:        <% @review_comments.each do |review_comment| %>
+20:          <tr>
+21:            <td><%= review_comment.title %></td>
+22:            <td><%= review_comment.body %></td>
+23:            <td><%= link_to 'Show', review_comment %></td>
+24:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+25:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+26:          </tr>
+27:        <% end %>
+28:      </tbody>
+29:    </table>
+30:    
+31:    <br>
+32:    
+33:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:36: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:53:13 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1462)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 3013)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+    
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_comments.each do |review_comment| %>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Review Comments</h1>
+4:    
+5:    <%= form_with url: review_comments_path, method: :get do |form| %>
+6:      <%= form.text_field :query %>
+7:        <%= form.submit "Search" %>
+8:        
+9:    
+10:    <table>
+11:      <thead>
+12:        <tr>
+13:          <th>Title</th>
+14:          <th>Body</th>
+15:          <th colspan="3"></th>
+16:        </tr>
+17:      </thead>
+18:    
+19:      <tbody>
+20:        <% @review_comments.each do |review_comment| %>
+21:          <tr>
+22:            <td><%= review_comment.title %></td>
+23:            <td><%= review_comment.body %></td>
+24:            <td><%= link_to 'Show', review_comment %></td>
+25:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+26:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+27:          </tr>
+28:        <% end %>
+29:      </tbody>
+30:    </table>
+31:    
+32:    <br>
+33:    
+34:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:37: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected end-of-input, expecting `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:53:45 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1386)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1476)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 3027)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+   <%= end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_comments.each do |review_comment| %>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Review Comments</h1>
+4:    
+5:    <%= form_with url: review_comments_path, method: :get do |form| %>
+6:      <%= form.text_field :query %>
+7:        <%= form.submit "Search" %>
+8:       <%= end %>
+9:    
+10:    <table>
+11:      <thead>
+12:        <tr>
+13:          <th>Title</th>
+14:          <th>Body</th>
+15:          <th colspan="3"></th>
+16:        </tr>
+17:      </thead>
+18:    
+19:      <tbody>
+20:        <% @review_comments.each do |review_comment| %>
+21:          <tr>
+22:            <td><%= review_comment.title %></td>
+23:            <td><%= review_comment.body %></td>
+24:            <td><%= link_to 'Show', review_comment %></td>
+25:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+26:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+27:          </tr>
+28:        <% end %>
+29:      </tbody>
+30:    </table>
+31:    
+32:    <br>
+33:    
+34:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:53:49 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1416)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1990)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+   <%= end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_comments.each do |review_comment| %>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Review Comments</h1>
+4:    
+5:    <%= form_with url: review_comments_path, method: :get do |form| %>
+6:      <%= form.text_field :query %>
+7:        <%= form.submit "Search" %>
+8:       <%= end %>
+9:    
+10:    <table>
+11:      <thead>
+12:        <tr>
+13:          <th>Title</th>
+14:          <th>Body</th>
+15:          <th colspan="3"></th>
+16:        </tr>
+17:      </thead>
+18:    
+19:      <tbody>
+20:        <% @review_comments.each do |review_comment| %>
+21:          <tr>
+22:            <td><%= review_comment.title %></td>
+23:            <td><%= review_comment.body %></td>
+24:            <td><%= link_to 'Show', review_comment %></td>
+25:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+26:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+27:          </tr>
+28:        <% end %>
+29:      </tbody>
+30:    </table>
+31:    
+32:    <br>
+33:    
+34:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-04-10 01:53:54 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 8.6ms | Allocations: 1924)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 7351)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.3ms | Allocations: 8616)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:53:54 +0100
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 01:53:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:53:55 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1420)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1950)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+   <%= end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @review_comments.each do |review_comment| %>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Review Comments</h1>
+4:    
+5:    <%= form_with url: review_comments_path, method: :get do |form| %>
+6:      <%= form.text_field :query %>
+7:        <%= form.submit "Search" %>
+8:       <%= end %>
+9:    
+10:    <table>
+11:      <thead>
+12:        <tr>
+13:          <th>Title</th>
+14:          <th>Body</th>
+15:          <th colspan="3"></th>
+16:        </tr>
+17:      </thead>
+18:    
+19:      <tbody>
+20:        <% @review_comments.each do |review_comment| %>
+21:          <tr>
+22:            <td><%= review_comment.title %></td>
+23:            <td><%= review_comment.body %></td>
+24:            <td><%= link_to 'Show', review_comment %></td>
+25:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+26:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+27:          </tr>
+28:        <% end %>
+29:      </tbody>
+30:    </table>
+31:    
+32:    <br>
+33:    
+34:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:37: syntax error, unexpected `end', expecting ')'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:56:15 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1282)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1372)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+   <%= end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%=  render @review_comments %>
+    </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Review Comments</h1>
+4:    
+5:    <%= form_with url: review_comments_path, method: :get do |form| %>
+6:      <%= form.text_field :query %>
+7:        <%= form.submit "Search" %>
+8:       <%= end %>
+9:    
+10:    <table>
+11:      <thead>
+12:        <tr>
+13:          <th>Title</th>
+14:          <th>Body</th>
+15:          <th colspan="3"></th>
+16:        </tr>
+17:      </thead>
+18:    
+19:      <tbody>
+20:        <%=  render @review_comments %>
+21:        </tbody>
+22:    </table>
+23:    
+24:    <br>
+25:    
+26:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:29: syntax error, unexpected `end', expecting ')'
+app/views/review_comments/index.html.erb:8: syntax error, unexpected `end'
+app/views/review_comments/index.html.erb:29: syntax error, unexpected `end', expecting ')'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:56:54 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:20
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3297)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3386)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms | Allocations: 4930)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    17:   </thead>
+    18: 
+    19:   <tbody>
+    20:     <%=  render @review_comments %>
+    21:     </tbody>
+    22: </table>
+    23: 
+  
+app/views/review_comments/index.html.erb:20
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:57:31 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:20
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.7ms | Allocations: 1757)
+  Rendered layout layouts/application.html.erb (Duration: 81.3ms | Allocations: 8575)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 0.5ms | Allocations: 10176)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:57:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:57:45 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 11.3ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 8429)
+Completed 200 OK in 100ms (Views: 97.0ms | ActiveRecord: 0.5ms | Allocations: 9983)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:57:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 01:57:50 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.6ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 69.8ms | Allocations: 6594)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.5ms | Allocations: 7170)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:57:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 01:57:55 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 3.3ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 6595)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.4ms | Allocations: 7134)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:57:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 01:58:19 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1370)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1460)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 2945)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <br></br>
+<br></br>
+<p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+   <% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
+
+):
+1:    <br></br>
+2:    <br></br>
+3:    <p id="notice"><%= notice %></p>
+4:    
+5:    <h1>Review Comments</h1>
+6:    
+7:    <%= form_with url: review_comments_path, method: :get do |form| %>
+8:      <%= form.text_field :query %>
+9:        <%= form.submit "Search" %>
+10:       <% end %>
+11:    
+12:    <table>
+13:      <thead>
+14:        <tr>
+15:          <th>Title</th>
+16:          <th>Body</th>
+17:          <th colspan="3"></th>
+18:        </tr>
+19:      </thead>
+20:    
+21:      <tbody>
+22:          <tr>
+23:            <td><%= review_comment.title %></td>
+24:            <td><%= review_comment.body %></td>
+25:            <td><%= link_to 'Show', review_comment %></td>
+26:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+27:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+28:          </tr>
+29:        <% end %>
+30:      </tbody>
+31:    </table>
+32:    
+33:    <br>
+34:    
+35:    <%= link_to 'New Review Comment', new_review_comment_path %>
+  
+app/views/review_comments/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:58:43 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.4ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 8.1ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 83.7ms | Allocations: 8428)
+Completed 200 OK in 96ms (Views: 90.6ms | ActiveRecord: 0.7ms | Allocations: 10029)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:58:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments/new" for 127.0.0.1 at 2022-04-10 01:58:46 +0100
+Processing by ReviewCommentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/new.html.erb within layouts/application
+  Rendered review_comments/_form.html.erb (Duration: 117.3ms | Allocations: 9829)
+  Rendered review_comments/new.html.erb within layouts/application (Duration: 121.2ms | Allocations: 10243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 11.3ms | Allocations: 1404)
+  Rendered layout layouts/application.html.erb (Duration: 184.9ms | Allocations: 15657)
+Completed 200 OK in 189ms (Views: 186.0ms | ActiveRecord: 0.3ms | Allocations: 16417)
+
+
+Started GET "/review_comments/css/styles.css" for 127.0.0.1 at 2022-04-10 01:58:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/review_comments/css/styles.css"):
+  
+Started POST "/review_comments" for 127.0.0.1 at 2022-04-10 01:59:03 +0100
+Processing by ReviewCommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "review_comment"=>{"title"=>"bad", "body"=>"this app  did not work for me"}, "commit"=>"Create Review comment"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/review_comments_controller.rb:27:in `block in create'
+  [1m[36mReviewComment Create (2.0ms)[0m  [1m[32mINSERT INTO "review_comments" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "bad"], ["body", "this app  did not work for me"], ["created_at", "2022-04-10 00:59:03.106125"], ["updated_at", "2022-04-10 00:59:03.106125"]]
+  ↳ app/controllers/review_comments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/review_comments_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/review_comments/2
+Completed 302 Found in 29ms (ActiveRecord: 11.7ms | Allocations: 3798)
+
+
+Started GET "/review_comments/2" for 127.0.0.1 at 2022-04-10 01:59:03 +0100
+Processing by ReviewCommentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments" WHERE "review_comments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/review_comments_controller.rb:63:in `set_review_comment'
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/show.html.erb within layouts/application
+  Rendered review_comments/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 8.3ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 69.1ms | Allocations: 5477)
+Completed 200 OK in 81ms (Views: 69.3ms | ActiveRecord: 1.6ms | Allocations: 7003)
+
+
+Started GET "/review_comments/css/styles.css" for 127.0.0.1 at 2022-04-10 01:59:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/review_comments/css/styles.css"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 01:59:07 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 3.5ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 6715)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.4ms | Allocations: 7278)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:59:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 01:59:10 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 10.8ms | Allocations: 1187)
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 6685)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.5ms | Allocations: 7222)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:59:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 01:59:14 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.5ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 3.4ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | Allocations: 6704)
+Completed 200 OK in 95ms (Views: 93.7ms | ActiveRecord: 0.7ms | Allocations: 7262)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 01:59:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:00:21 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:22
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3282)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3371)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms | Allocations: 4831)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    19:   </thead>
+    20: 
+    21:   <tbody>
+    22:     <%= render @review_comments %>
+    23:   </tbody>
+    24: </table>
+    25: 
+  
+app/views/review_comments/index.html.erb:22
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:00:52 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/_review_comments.html.erb (Duration: 12.5ms | Allocations: 18366)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 19649)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 19738)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 21288)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `review_comment' for #<ActionView::Base:0x0000000000b4a8>
+Did you mean?  @review_comments
+               review_comment_url):
+    1: <tr>
+    2:         <td><%= review_comment.title %></td>
+    3:         <td><%= review_comment.body %></td>
+    4:         <td><%= link_to 'Show', review_comment %></td>
+    5:         <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+  
+app/views/review_comments/_review_comments.html.erb:2
+app/views/review_comments/index.html.erb:22
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:02:03 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/_review_comments.html.erb:1
+  Rendered review_comments/_review_comments.html.erb (Duration: 3.8ms | Allocations: 1373)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.4ms | Allocations: 1755)
+  Rendered layout layouts/application.html.erb (Duration: 78.5ms | Allocations: 8909)
+Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 0.5ms | Allocations: 10510)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:02:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 02:02:07 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/_review_comments.html.erb:1
+  Rendered review_comments/_review_comments.html.erb (Duration: 7.0ms | Allocations: 1006)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.6ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 92.3ms | Allocations: 6834)
+Completed 200 OK in 95ms (Views: 93.4ms | ActiveRecord: 0.5ms | Allocations: 7389)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:02:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:02:13 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/_review_comments.html.erb:1
+  Rendered review_comments/_review_comments.html.erb (Duration: 2.4ms | Allocations: 1012)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 4.3ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 6864)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.5ms | Allocations: 7422)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:02:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:03:21 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/_review_comments.html.erb (Duration: 2.3ms | Allocations: 1246)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2530)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2620)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 4106)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% @review_comments do |review_comment| %>
+      <tr>
+        <td><%= review_comment.title %></td>
+        <td><%= review_comment.body %></td>
+        <td><%= link_to 'Show', review_comment %></td>
+        <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+        <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+):
+1:    <% @review_comments do |review_comment| %>
+2:          <tr>
+3:            <td><%= review_comment.title %></td>
+4:            <td><%= review_comment.body %></td>
+5:            <td><%= link_to 'Show', review_comment %></td>
+6:            <td><%= link_to 'Edit', edit_review_comment_path(review_comment) %></td>
+7:            <td><%= link_to 'Destroy', review_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+8:          </tr>
+9:        <% end %>
+  
+app/views/review_comments/_review_comments.html.erb:1: syntax error, unexpected `do', expecting `end'
+app/views/review_comments/_review_comments.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/_review_comments.html.erb:1: syntax error, unexpected `do', expecting `end'
+app/views/review_comments/_review_comments.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/_review_comments.html.erb:1: syntax error, unexpected `do', expecting `end'
+app/views/review_comments/_review_comments.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/_review_comments.html.erb:1: syntax error, unexpected `do', expecting `end'
+app/views/review_comments/_review_comments.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/_review_comments.html.erb:1: syntax error, unexpected `do', expecting `end'
+app/views/review_comments/_review_comments.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/_review_comments.html.erb:1: syntax error, unexpected `do', expecting `end'
+app/views/review_comments/_review_comments.html.erb:11: syntax error, unexpected `end', expecting end-of-input
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:04:05 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1960)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2049)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 3599)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    20: 
+    21:   <tbody>
+    22:     
+    23:     <%= render @review_comment %>
+    24: 
+    25:   </tbody>
+    26: </table>
+  
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:04:19 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.5ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 3292)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 3381)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.5ms | Allocations: 4925)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    20: 
+    21:   <tbody>
+    22:     
+    23:     <%= render @review_comments %>
+    24: 
+    25:   </tbody>
+    26: </table>
+  
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:04:55 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 8106)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8195)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms | Allocations: 9741)
+
+
+  
+ActionView::Template::Error (undefined method `html' for #<ActiveRecord::Relation [#<ReviewComment id: 1, title: "Good", body: "This app is good for managing my contacts", created_at: "2022-04-10 00:34:25.873390000 +0000", updated_at: "2022-04-10 00:34:25.873390000 +0000">, #<ReviewComment id: 2, title: "bad", body: "this app  did not work for me", created_at: "2022-04-10 00:59:03.106125000 +0000", updated_at: "2022-04-10 00:59:03.106125000 +0000">]>):
+    20: 
+    21:   <tbody>
+    22:     
+    23:     <%= render @review_comments.html.erb %>
+    24: 
+    25:   </tbody>
+    26: </table>
+  
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:05:02 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3380)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms | Allocations: 4924)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    20: 
+    21:   <tbody>
+    22:     
+    23:     <%= render @review_comments %>
+    24: 
+    25:   </tbody>
+    26: </table>
+  
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:05:42 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.6ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 3380)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.6ms | Allocations: 4924)
+
+
+  
+ActionView::Template::Error (Missing partial review_comments/_review_comment with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "C:/Users/alan.mellowes/Desktop/contacts/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actiontext-6.1.5/app/views"
+  * "C:/Ruby30/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.5/app/views"
+):
+    20: 
+    21:   <tbody>
+    22:     
+    23:     <%= render @review_comments %>
+    24: 
+    25:   </tbody>
+    26: </table>
+  
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:06:38 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 1.6ms | Allocations: 454)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2681)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 6.2ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 8912)
+Completed 200 OK in 90ms (Views: 86.3ms | ActiveRecord: 0.4ms | Allocations: 10513)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:06:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=search&commit=Search" for 127.0.0.1 at 2022-04-10 02:06:43 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"search", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 0.5ms | Allocations: 223)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 10.7ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 6863)
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.5ms | Allocations: 7439)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:06:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-10 02:08:02 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 119.5ms | Allocations: 8294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 21.1ms | Allocations: 8984)
+  Rendered layout layouts/application.html.erb (Duration: 221.3ms | Allocations: 22250)
+Completed 200 OK in 256ms (Views: 231.4ms | ActiveRecord: 1.5ms | Allocations: 26410)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:08:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 02:08:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:08:05 +0100
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.6ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 1.7ms | Allocations: 605)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 6030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 4.1ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 113.7ms | Allocations: 11431)
+Completed 200 OK in 128ms (Views: 118.4ms | ActiveRecord: 3.8ms | Allocations: 13288)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:08:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:08:11 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 0.6ms | Allocations: 221)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1803)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 5.2ms | Allocations: 1187)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 6831)
+Completed 200 OK in 90ms (Views: 88.5ms | ActiveRecord: 0.5ms | Allocations: 7386)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:08:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=&commit=Search" for 127.0.0.1 at 2022-04-10 02:11:08 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 0.4ms | Allocations: 223)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.3ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 6878)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.5ms | Allocations: 7447)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:11:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=&commit=Search" for 127.0.0.1 at 2022-04-10 02:11:15 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 0.7ms | Allocations: 221)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 3.1ms | Allocations: 1187)
+  Rendered layout layouts/application.html.erb (Duration: 84.5ms | Allocations: 6850)
+Completed 200 OK in 86ms (Views: 85.0ms | ActiveRecord: 0.5ms | Allocations: 7388)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:11:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:11:30 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.2ms)[0m  [1m[34mSELECT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 1.1ms | Allocations: 223)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 10.3ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 6871)
+Completed 200 OK in 85ms (Views: 83.7ms | ActiveRecord: 0.5ms | Allocations: 7431)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:11:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:15:05 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 1951)
+Completed 500 Internal Server Error in 24ms (Allocations: 3067)
+
+
+  
+ActionView::Template::Error ('ReviewComment (call 'ReviewComment.connection' to establish a connection)' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    20: 
+    21:   <tbody>
+    22:     
+    23:     <%= render @review_comments %>
+    24: 
+    25:   </tbody>
+    26: </table>
+  
+app/views/review_comments/index.html.erb:23
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:15:41 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+Completed 500 Internal Server Error in 10ms (Allocations: 12664)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:20:35 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+Completed 500 Internal Server Error in 7ms (Allocations: 12256)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/" for 127.0.0.1 at 2022-04-10 02:20:41 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/_header.html.erb:34
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 22.3ms | Allocations: 8380)
+  Rendered layout layouts/application.html.erb (Duration: 86.3ms | Allocations: 13094)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 2.0ms | Allocations: 13975)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:20:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/js/scripts.js" for 127.0.0.1 at 2022-04-10 02:20:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:20:44 +0100
+Processing by ReviewCommentsController#index as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 12237)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:25:49 +0100
+Processing by ReviewCommentsController#index as HTML
+Completed 500 Internal Server Error in 10ms (Allocations: 12608)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:25:51 +0100
+Processing by ReviewCommentsController#index as HTML
+Completed 500 Internal Server Error in 9ms (Allocations: 12258)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:25:52 +0100
+Processing by ReviewCommentsController#index as HTML
+Completed 500 Internal Server Error in 11ms (Allocations: 12215)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:25:52 +0100
+Processing by ReviewCommentsController#index as HTML
+Completed 500 Internal Server Error in 7ms (Allocations: 12220)
+
+
+  
+NoMethodError (undefined method `ransack' for ReviewComment:Class):
+  
+app/controllers/review_comments_controller.rb:76:in `review_comments'
+app/controllers/review_comments_controller.rb:6:in `index'
+Started GET "/review_comments" for 127.0.0.1 at 2022-04-10 02:37:20 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewCommentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "review_comments".* FROM "review_comments"[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [2 times] (Duration: 3.0ms | Allocations: 672)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 45.0ms | Allocations: 6916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 16.5ms | Allocations: 8378)
+  Rendered layout layouts/application.html.erb (Duration: 254.1ms | Allocations: 27259)
+Completed 200 OK in 307ms (Views: 264.5ms | ActiveRecord: 3.2ms | Allocations: 32406)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:37:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=good&commit=Search" for 127.0.0.1 at 2022-04-10 02:37:25 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"good", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (1.7ms)[0m  [1m[34mSELECT DISTINCT "review_comments".* FROM "review_comments" WHERE (("review_comments"."title" LIKE '%good%') OR ("review_comments"."body" LIKE '%good%'))[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [1 times] (Duration: 0.3ms | Allocations: 140)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 9.3ms | Allocations: 1240)
+  Rendered layout layouts/application.html.erb (Duration: 76.4ms | Allocations: 7168)
+Completed 200 OK in 83ms (Views: 78.6ms | ActiveRecord: 1.9ms | Allocations: 8565)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:37:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 02:37:29 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "review_comments".* FROM "review_comments" WHERE (("review_comments"."title" LIKE '%bad%') OR ("review_comments"."body" LIKE '%bad%'))[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 117)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1720)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 7.1ms | Allocations: 1187)
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 6752)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.6ms | Allocations: 7608)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:37:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 02:38:14 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "review_comments".* FROM "review_comments" WHERE (("review_comments"."title" LIKE '%bad%') OR ("review_comments"."body" LIKE '%bad%'))[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [1 times] (Duration: 7.7ms | Allocations: 148)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 5.6ms | Allocations: 1757)
+  Rendered layout layouts/application.html.erb (Duration: 92.4ms | Allocations: 8632)
+Completed 200 OK in 105ms (Views: 99.2ms | ActiveRecord: 0.6ms | Allocations: 10490)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:38:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  
+Started GET "/review_comments?query=bad&commit=Search" for 127.0.0.1 at 2022-04-10 02:38:19 +0100
+Processing by ReviewCommentsController#index as HTML
+  Parameters: {"query"=>"bad", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering review_comments/index.html.erb within layouts/application
+  [1m[36mReviewComment Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "review_comments".* FROM "review_comments" WHERE (("review_comments"."title" LIKE '%bad%') OR ("review_comments"."body" LIKE '%bad%'))[0m
+  ↳ app/views/review_comments/index.html.erb:23
+  Rendered collection of review_comments/_review_comment.html.erb [1 times] (Duration: 7.9ms | Allocations: 144)
+  Rendered review_comments/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:34
+  Rendered home/_header.html.erb (Duration: 8.3ms | Allocations: 1753)
+  Rendered layout layouts/application.html.erb (Duration: 98.9ms | Allocations: 8580)
+Completed 200 OK in 115ms (Views: 109.3ms | ActiveRecord: 0.9ms | Allocations: 10482)
+
+
+Started GET "/css/styles.css" for 127.0.0.1 at 2022-04-10 02:38:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  

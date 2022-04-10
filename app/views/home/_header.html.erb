@@ -30,7 +30,6 @@
       <li class="nav-item">
       	<%= link_to "About Us", home_about_path, class:"nav-link" %>
       </li>
-
    
       <% if user_signed_in? %>
       <li class="nav-item">
@@ -48,6 +47,11 @@
       <li class="nav-item">
       	<%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
       </li>
+
+      <li class="nav-item">
+        <%= link_to "Reviews", review_comments_path, class:"nav-link" %>
+      </li>
+
      <% else %>
       <li class="nav-item">
       	<%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
@@ -56,6 +60,8 @@
       <li class="nav-item">
       	<%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
       </li>
+
+      
 
     <% end %>
 

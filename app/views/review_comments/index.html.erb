@@ -1,0 +1,30 @@
+<br></br>
+<br></br>
+<p id="notice"><%= notice %></p>
+
+<h1>Review Comments</h1>
+
+<%= form_with url: review_comments_path, method: :get do |form| %>
+  <%= form.text_field :query %>
+    <%= form.submit "Search" %>
+   <% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <%= render @review_comments %>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review Comment', new_review_comment_path %>
